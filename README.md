@@ -34,7 +34,9 @@ Enterprise applications.
 
 
 
-2)Which version of Java you are working with? How can you find out the version of Java you are using?
+2)ich version of Java you are working with? How can you find out the version of Java you are using?
+
+2)Wh<img width="477" alt="java1" src="https://user-images.githubusercontent.com/102998720/170152312-17708642-8926-4f20-8280-aab40452644b.png">
 
 
 3)What is IDE? Which IDE you are working with?
