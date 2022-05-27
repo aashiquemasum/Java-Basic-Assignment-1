@@ -407,14 +407,276 @@ This is also a very popular interview question, both at junior and senior levels
 
 (JRE)Java runtime Environment. Exection stage 
 Java Runtime Environment (JRE) is an open-access software distribution that has a Java class library, specific tools, and a separate JVM. In exection stage JRE takes the Java code, combines it with needed libraries and starts the JVM to execute it. 
+  
+  In java life cycle JRE used on execution stage. 
  
  
  
-What is the syntax? Make a list of rules(you learned in a class) you should always follow while creating your Java application.
-How should we name our Java application?
-Write a structure of a simple Java application.
-What is the importance of comments in the program? Mention different ways in which we can write comments in a program.
-Write a simple Java program to print the “Hello World” message. Keeping in mind stages of Java Life Cycle draw a flow chart to show journey of your first program
+18)What is the syntax? Make a list of rules(you learned in a class) you should always follow while creating your Java application.
+  
+In computer science, the syntax of a computer language is the set of rules that defines the combinations of symbols that are considered to be correctly structured statements or expressions in that language. This applies both to programming languages, where the document represents source code, and to markup languages, where the document represents data.
+
+The syntax of a language defines its surface form.[1] Text-based computer languages are based on sequences of characters, while visual programming languages are based on the spatial layout and connections between symbols (which may be textual or graphical). Documents that are syntactically invalid are said to have a syntax error. When designing the syntax of a language, a designer might start by writing down examples of both legal and illegal strings, before trying to figure out the general rules from these examples.[2]
+
+Syntax therefore refers to the form of the code, and is contrasted with semantics – the meaning. In processing computer languages, semantic processing generally comes after syntactic processing; however, in some cases, semantic processing is necessary for complete syntactic analysis, and these are done together or concurrently. In a compiler, the syntactic analysis comprises the frontend, while the semantic analysis comprises the backend (and middle end, if this phase is distinguished).
+
+
+Contents
+1	Levels of syntax
+1.1	Examples of errors
+2	Syntax definition
+2.1	Example: Lisp S-expressions
+2.2	Complex grammars
+3	Syntax versus semantics
+4	See also
+5	References
+6	External links
+ 
+  Simple Style Rules for Java
+
+ 
+
+Style entails a program's readability and logic structuring. Style is almost as important as correctness in programming. This is useful for you, the programmer, when you are writing code and us, the graders for reading and making sense of a program. Also, in industry and real-world situations, you usually do not write a whole program at once, nor do you only look at programs you wrote. Usually industry programmers are looking at code they did not write or wrote a long time ago, which is where style and comments become very important to understanding programs.
+
+ 
+
+Good rules to live by (especially if you don't want to lose points on your programs):
+
+ 
+
+1. Capitalize class names
+
+ 
+
+public class Thing
+
+ 
+
+2. Do NOT capitalize the first letter of methods or variables
+
+ 
+
+public void methodName()
+
+{ }
+
+ 
+
+int num1 = 3;
+
+ 
+
+Notice: In the above example, interior letters of method names and variables can be capitalized. Usually when two or more words are combined into one method name or variable name, we capitalize the additional words i.e. methodName. This is sometimes referred to as camelBack.
+
+ 
+
+3. Write comments!
+
+ 
+
+Comments do not have to be excessive; normally they won't be on every line of a program. However, there should at least be a comment explaining the whole class, comments for each method, comments for the declaration of variables, and comments for confusing or long parts of the code.
+
+ 
+
+//*******************************************
+
+// include comment boxes
+
+//*******************************************
+
+ 
+
+// and include comments inside the code for tricky parts
+
+ 
+
+4. Use meaningful variable names
+
+ 
+
+int numTokens;
+
+ 
+
+double hypotenuse;
+
+ 
+
+DON'T use double h; or int nT - these are too vague. Also, don't use 10 words in 1 variable - that's a little too much.
+
+ 
+
+5. Use constants for constant values
+
+ 
+
+Ex: Above, if you are calculating prices of items, the texasTaxRate will be useful. However, this doesn't change frequently - it is constant. So, in Java you should declare this constant like:
+
+ 
+
+final double TRAVIS_PROPERTY_TAX_RATE = 0.014;
+
+ 
+
+Similarly, if you are using any real world value that is constant, like how much quarters are worth, or what gravity is, declare it final in your program.
+
+ 
+
+Notice: I used all capital letters for the constant, separating words with underscores. This is typical Java convention.
+
+ 
+
+6. Indent!
+
+ 
+
+When you declare a class or a method, indent at least 3 spaces to start the next line. All method declarations should line up with each other. Also, when you have an if-statement or a loop-statement, you should always indent the body at least 3 spaces.  You should be fine if you follow any of the indention patterns from your textbook.  The key point is to be consistent!
+
+ 
+
+public class Thing
+
+{
+
+ 
+
+   public static void main(String[] args)
+
+   {
+
+ 
+
+      int num = 3;
+
+ 
+
+      if (num > 0)
+
+         if (num < 10)
+
+            num++;
+
+                    else
+
+            num--;
+
+      else
+
+         num = 0;
+
+ 
+
+   } //main
+
+ 
+
+ }//Thing
+
+ 
+  
+  
+ 
+19) How should we name our Java application?
+                      
+                      
+ Standard Java Naming Conventions
+Packages: Names should be in lowercase. ...
+Classes: Names should be in CamelCase. ...
+Interfaces: Names should be in CamelCase. ...
+Methods: Names should be in mixed case. ...
+Variables: Names should be in mixed case. ...
+Constants: Names should be in uppercase.
+                      
+If you do not specify the app name in your New Relic configuration file, most New Relic agents provide a generic application name by default. To ensure all aggregated data for the same app is reported accurately, make sure you give each app a descriptive name.                      
+                      
+                      
+20) Write a structure of a simple Java application.
+                      
+ It is necessary to know the exact structure of the Java program, and this lesson contains a detailed description of it. This lesson is essential for you before proceeding to learn more advanced lessons of Java programming. Here, in this chapter, you will study the structure of the Java program. Such as how to create a simple Java program and what its different sections mean.
+
+Java program structure means - the way to write a java program or general format.
+
+A Java program involves the following sections:
+Documentation Section
+Package Statement
+Import Statements
+Interface Statement
+Class Definition
+Main Method Class
+Main Method Definition
+Section	Description
+Documentation Section	You can write a comment in this section. Comments are beneficial for the programmer because they help them understand the code. These are optional, but we suggest you use them because they are useful to understand the operation of the program, so you must write comments within the program.
+Package statement	You can create a package with any name. A package is a group of classes that are defined by a name. That is, if you want to declare many classes within one element, then you can declare it within a package. It is an optional part of the program, i.e., if you do not want to declare any package, then there will be no problem with it, and you will not get any errors. Here, the package is a keyword that tells the compiler that package has been created.
+It is declared as:
+
+package package_name;
+Import statements	This line indicates that if you want to use a class of another package, then you can do this by importing it directly into your program.
+import calc.add;
+Interface statement	Interfaces are like a class that includes a group of method declarations. It's an optional section and can be used when programmers want to implement multiple inheritances within a program.
+Class Definition	A Java program may contain several class definitions. Classes are the main and essential elements of any Java program.
+Main Method Class	Every Java stand-alone program requires the main method as the starting point of the program. This is an essential part of a Java program. There may be many classes in a Java program, and only one class defines the main method. Methods contain data type declaration and executable statements.
+
+Here is an example of the Hello Java program to understand the class structure and features. There are a few lines in the program, and the primary task of the program is to print Hello Java text on the screen.
+
+//Name of this file will be "Hello.java"
+
+public class Hello
+{   
+    /* Author: www.w3schools.in
+    Date: 2018-04-28
+    Description:
+    Writes the words "Hello Java" on the screen */
+
+    public static void main(String[] args)
+    {
+        System.out.println("Hello Java");  
+    }
+}
+Hello Java
+Here are the most important points to note about the Java programs:
+
+You have to keep in mind that, Java code is case sensitive.
+To write a Java program, you must have to define class first.
+The name of the class in Java (which holds the main method) is the name of the Java program, and the same name will be given in the filename. As mentioned above in the sample program; The name of the class is "Hello" in which the main method is, then this file will be named "Hello.Java".
+public class Hello	
+This creates a class called Hello.
+All class names must start with a capital letter.
+The public word means that it is accessible from any other classes.
+/* Comments */	The compiler ignores comment block. Comment can be used anywhere in the program to add info about the program or code block, which will be helpful for developers to understand the existing code in the future easily.
+Braces	Two curly brackets {...} are used to group all the commands, so it is known that the commands belong to that class or method.
+public static void main	
+When the main method is declared public, it means that it can also be used by code outside of its class, due to which the main method is declared public.
+
+The word static used when we want to access a method without creating its object,  as we call the main method, before creating any class objects.
+The word void indicates that a method does not return a value. main() is declared as void because it does not return a value.
+main is a method; this is a starting point of a Java program.
+You will notice that the main method code has been moved to some spaces left. It is called indentation which used to make a program easier to read and understand.
+
+String[] args	It is an array where each element of it is a string, which has been named as "args". If your Java program is run through the console, you can pass the input parameter, and main() method takes it as input.
+System.out.println();	This statement is used to print text on the screen as output, where the system is a predefined class, and out is an object of the PrintWriter class defined in the system. The method println prints the text on the screen with a new line. You can also use print() method instead of println() method. All Java statement ends with a semicolon.
+https://www.w3schools.in/java/program-structure
+           
+           
+           
+                      
+21) What is the importance of comments in the program? Mention different ways in which we can write comments in a program.
+           
+           
+ omments are text notes added to the program to provide explanatory information about the source code. They are used in a programming language to document the program and remind programmers of what tricky things they just did with the code and also helps the later generation for understanding and maintenance of code.
+ There are usually two syntactic ways to comment. The first is called a single line comment and, as implied, only applies to a single line in the "source code" (the program). The second is called a Block comment and refers usually refers to a paragraph of text.          
+           
+22) Write a simple Java program to print the “Hello World” message. Keeping in mind stages of Java Life Cycle draw a flow chart to show journey of your first program
+          
+           
+           
+           public class HelloWorld
+{
+public static void main(String[] args)
+{
+System.out.println("Hello, World!");
+}
+}
+
 What is file extension for Java executable code? At which stage of Java Life Cycle we get executable code?
 When does compile time starts?
 Compile time ends with generation of which file?
